@@ -15,10 +15,10 @@
  */
 func recoverTree(root *TreeNode)  {
 	var prev, x, y, pred *TreeNode
-	while(root != nil) {
-		if (root.Left != nil) {
+	for root != nil {
+		if root.Left != nil {
 			prev = root.Left
-			while(prev.Right != nil && prev.Right != root) {
+			for prev.Right != nil && prev.Right != root {
 				prev = prev.Right
 			}
 			if prev.Right == nil {
