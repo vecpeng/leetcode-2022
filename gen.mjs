@@ -11,10 +11,11 @@ for ( const file of files) {
         echo "" > ${num}.${title}/README.md
         echo "" >> README.md
         mv ./${num}.${title}.go ./${num}.${title}/${num}.${title}.go
-        git add *
-        git commit -m ${":sparkles:feat(tree): add solution to [" + num + "]" + title}
+        git add ./
         `
-        fs.writeFile(`./${num}.${title}/README.md`, `#[${num}]${title}`)
-        fs.appendFile(`./README.md`, `\t- [x] ${num}.${title}`)
+        fs.writeFileSync(`./${num}.${title}/README.md`, `#[${num}]${title}`)
+        fs.appendFileSync(`./${num}.${title}/README.md`, `\t- [x] ${num}.${title}`)
+
+        await $`git commit -m ${":sparkles:feat(tree): add solution to [" + num + "]" + title}`
     }
 }
