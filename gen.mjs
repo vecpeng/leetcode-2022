@@ -15,6 +15,6 @@ for ( const file of files) {
         Git commit -m ":sparkles:feat(tree): add solution to [${num}]${title}"
         `
         fs.writeFile(`./${num}.${title}/README.md`, `#[${num}]${title}`)
-        fs.writeFile(`./README.md`, `  - [x] ${num}.${title}`)
+        fs.appendFile(`./README.md`, `\t- [x] ${num}.${title}`)
     }
 }
