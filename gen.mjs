@@ -8,11 +8,13 @@ for ( const file of files) {
         await $`
         mkdir ${num}.${title}
         echo "" > ${num}.${title}/${num}.${title}.go
-        echo #[${num}]${title} > ${num}.${title}/README.md
-        echo   - [x] ${num}.${title} >> README.md
+        echo "" > ${num}.${title}/README.md
+        echo "" >> README.md
         mv ./${num}.${title}.go ./${num}.${title}/${num}.${title}.go
         git add *
         Git commit -m ":sparkles:feat(tree): add solution to [${num}]${title}"
         `
+        fs.writeFile(`./${num}.${title}/README.md`, `#[${num}]${title}`)
+        fs.writeFile(`./README.md`, `  - [x] ${num}.${title}`)
     }
 }
