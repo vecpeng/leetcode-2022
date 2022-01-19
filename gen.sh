@@ -1,3 +1,18 @@
+files=$(ls ./)
+title=""
+for file in $files
+do
+#   if [ $(expr index ${file} $1) != 0 ]
+#   then
+#     title=${file: index : }
+#     echo title
+    index=$(expr index ${file} $1)
+    echo $index
+    if test -f $file && [ $index != 0 ]
+    then
+        echo $file
+    fi
+done
 mkdir $1.$2
 echo "" > $1.$2/$1.$2.go
 echo "#[$1]$2" > $1.$2/README.md
