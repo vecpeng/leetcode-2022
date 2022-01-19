@@ -12,7 +12,7 @@ for ( const file of files) {
         echo "" >> README.md
         mv ./${num}.${title}.go ./${num}.${title}/${num}.${title}.go
         git add *
-        Git commit -m ":sparkles:feat(tree): add solution to [${num}]${title}"
+        git commit -m ${":sparkles:feat(tree): add solution to [" + num + "]" + title}
         `
         fs.writeFile(`./${num}.${title}/README.md`, `#[${num}]${title}`)
         fs.appendFile(`./README.md`, `\t- [x] ${num}.${title}`)
