@@ -7,10 +7,10 @@ for ( const file of files) {
         const title = strs[1]
         await $`
         mkdir ${num}.${title}
-        echo "" > ${num}.${title}/${num}.${title}.go
+        echo "" > ${num}.${title}/${num}.${title}.cpp
         echo "" > ${num}.${title}/README.md
         echo "" >> README.md
-        mv ./${num}.${title}.go ./${num}.${title}/${num}.${title}.go
+        mv ./${num}.${title}.cpp ./${num}.${title}/${num}.${title}.cpp
         git add ./
         `
         fs.writeFileSync(`./${num}.${title}/README.md`, `#[${num}]${title}`)
