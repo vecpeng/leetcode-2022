@@ -14,7 +14,7 @@ for ( const file of files) {
         git add ./
         `
         fs.writeFileSync(`./${num}.${title}/README.md`, `#[${num}]${title}`)
-        fs.appendFileSync(`./${num}.${title}/README.md`, `\t- [x] ${num}.${title}`)
+        fs.appendFileSync(`./README.md`, `\t- [x] ${num}.${title}`)
 
         await $`git commit -m ${":sparkles:feat(tree): add solution to [" + num + "]" + title}`
     }
