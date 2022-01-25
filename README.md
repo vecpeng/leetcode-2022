@@ -1,5 +1,5 @@
 I plan to solve 800 problems in 2022.
-- [ ] First week, tag of tree.
+- [ ] First month, tag of tree.
   - [x] 390.消除游戏:
   - [x] 94.二叉树的中序遍历
   - [x] 95.不同的二叉搜索树-ii
@@ -26,3 +26,6 @@ I plan to solve 800 problems in 2022.
 	- [x] 306.累加数
 	- [x] 111.二叉树的最小深度
 	- [x] 112.路径总和
+	- [x] 113.路径总和-ii
+
+- [ ] Second month, tag of heap.
